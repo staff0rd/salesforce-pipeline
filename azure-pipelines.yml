@@ -8,11 +8,21 @@ steps:
 - task: sfpwowerscript-installsfdx-task@5
   displayName: Install SFDX
 - task: sfpwowerscript-authenticateorg-task@7
-  displayName: Authenticate with Salesforce
+  displayName: Authenticate with DevHub
   inputs:
     method: JWT
     jwt_key_file: server.key
     username: $(SalesforceUsername)
+    alias: DevHub
+    isdevhub: true
+    clientid: $(SalesforceClientId)
+    isTelemetryEnabled: true
+- task: sfpwowerscript-authenticateorg-task@7
+  displayName: Authenticate with ScratchOrg
+  inputs:
+    method: JWT
+    jwt_key_file: server.key
+    username: $(ScratchOrgUsername)
     alias: MyScratchOrg
     isdevhub: false
     clientid: $(SalesforceClientId)
