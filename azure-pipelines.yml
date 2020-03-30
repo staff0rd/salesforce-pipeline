@@ -10,11 +10,10 @@ steps:
 - task: sfpwowerscript-authenticateorg-task@7
   displayName: Authenticate with Salesforce
   inputs:
-  - method: JWT
+    method: JWT
     jwt_key_file: server.key
     username: $(SalesforceUsername)
     alias: MyScratchOrg
     isdevhub: true
     clientid: $(SalesforceClientId)
     isTelemetryEnabled: true
-    
