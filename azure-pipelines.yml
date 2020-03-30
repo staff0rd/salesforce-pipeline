@@ -5,5 +5,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: sfpwowerscript-installsfdx-task@4
+- task: sfpwowerscript-installsfdx-task@5
   displayName: Install SFDX
