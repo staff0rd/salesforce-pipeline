@@ -1,0 +1,10 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: sfpwowerscript-installsfdx-task
+  displayName: 'install SFDX cli'
+
