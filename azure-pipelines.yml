@@ -32,8 +32,8 @@ steps:
 
 - task: sfpowerscript-deploysourcetoorg-task@5
   displayName: Deploy source to scratch org
-  workingDirectory: src
   inputs:
+    project_directory: src
     target_org: MyScratchOrg
     source_directory: 'force-app'
     checkonly: false
