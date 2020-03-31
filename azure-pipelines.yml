@@ -40,3 +40,19 @@ steps:
     wait_time: '20'
     testlevel: 'NoTestRun'
     isTelemetryEnabled: true
+
+- task: sfpwowerscript-triggerapextest-task@4
+  displayName: Run Apex Unit Tests
+  inputs:
+    target_org: 'MyScratchOrg'
+    testlevel: 'RunLocalTests'
+    wait_time: '60',
+    synchronous: false
+    isTelemetryEnabled: true
+
+- task: sfpwowerscript-validateapextestcoverage-task@2
+  displayName: Validate 90% Apex Test Code Coverage
+  inputs:
+    target_org: 'MyScratchOrg'
+    test_coverage: '90'
+    isTelemetryEnabled: true
