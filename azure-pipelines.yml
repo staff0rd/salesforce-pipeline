@@ -30,7 +30,7 @@ steps:
     clientid: $(SalesforceClientId)
     isTelemetryEnabled: true
 
-- task: sfpowerscript-deploysourcetoorg-task@6
+- task: sfpowerscript-deploysourcetoorg-task@5
   displayName: Deploy source to scratch org
   inputs:
     target_org: MyScratchOrg
