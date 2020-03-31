@@ -46,7 +46,7 @@ steps:
   inputs:
     target_org: 'MyScratchOrg'
     testlevel: 'RunLocalTests'
-    wait_time: '60',
+    wait_time: '60'
     synchronous: false
     isTelemetryEnabled: true
 
