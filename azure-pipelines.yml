@@ -8,7 +8,7 @@ steps:
 - task: sfpwowerscript-installsfdx-task@5
   displayName: Install SFDX
 
-  - task: sfpwowerscript-authenticateorg-task@7
+- task: sfpwowerscript-authenticateorg-task@7
   displayName: Authenticate with DevHub
   inputs:
     method: JWT
